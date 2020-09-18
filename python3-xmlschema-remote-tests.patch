@@ -1,0 +1,19 @@
+--- xmlschema-1.2.4/xmlschema/testing/__init__.py.orig	2020-03-19 16:13:12.000000000 +0100
++++ xmlschema-1.2.4/xmlschema/testing/__init__.py	2020-09-18 21:08:20.536024723 +0200
+@@ -17,6 +17,7 @@
+ build a set of test classes. Each path is followed by a list of options that defines a
+ custom setting for each test.
+ """
++import os
+ import platform
+ from urllib.request import urlopen
+ from urllib.error import URLError
+@@ -41,7 +42,7 @@
+     return False
+ 
+ 
+-SKIP_REMOTE_TESTS = not has_network_access(
++SKIP_REMOTE_TESTS = os.environ.get("XMLSCHEMA_SKIP_REMOTE_TESTS", 0) or not has_network_access(
+     'https://github.com/', 'https://www.w3.org/', 'https://www.sissa.it/'
+ )
+ 
