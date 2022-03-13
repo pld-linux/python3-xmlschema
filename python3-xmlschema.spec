@@ -6,18 +6,18 @@
 Summary:	XML Schema validator and decoder
 Summary(pl.UTF-8):	Biblioteka do sprawdzania poprawności i dekodowania schematów XML
 Name:		python3-xmlschema
-Version:	1.2.4
-Release:	2
+Version:	1.10.0
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/xmlschema/
 Source0:	https://files.pythonhosted.org/packages/source/x/xmlschema/xmlschema-%{version}.tar.gz
-# Source0-md5:	841bd178f6c27884a801ab0b1245e571
+# Source0-md5:	b60648923528059b0be71f2e8879b4a4
 Patch0:		%{name}-remote-tests.patch
 URL:		https://pypi.org/project/xmlschema/
-BuildRequires:	python3-elementpath >= 2.0.2
+BuildRequires:	python3-elementpath >= 2.5.0
 BuildRequires:	python3-elementpath < 3.0.0
-BuildRequires:	python3-modules >= 1:3.5
+BuildRequires:	python3-modules >= 1:3.7
 BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-lxml
@@ -29,7 +29,7 @@ BuildRequires:	sed >= 4.0
 BuildRequires:	python3-sphinx_rtd_theme
 BuildRequires:	sphinx-pdg-3
 %endif
-Requires:	python3-modules >= 1:3.5
+Requires:	python3-modules >= 1:3.7
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
