@@ -56,7 +56,7 @@ Dokumentacja API modułu Pythona xmlschema.
 
 %prep
 %setup -q -n xmlschema-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %py3_build
