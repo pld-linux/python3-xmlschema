@@ -7,7 +7,7 @@ Summary:	XML Schema validator and decoder
 Summary(pl.UTF-8):	Biblioteka do sprawdzania poprawności i dekodowania schematów XML
 Name:		python3-xmlschema
 Version:	2.1.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/xmlschema/
